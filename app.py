@@ -1,13 +1,14 @@
 import gradio as gr
 import pandas as pd
 import numpy as np
+import tensorflow
 from tensorflow.keras.models import load_model
 from sklearn.preprocessing import MinMaxScaler
 import matplotlib.pyplot as plt
 from datetime import datetime, timedelta
 
 # Charger le modèle entraîné
-model = load_model('modele_consommation_electricite.h5')
+model = load_model('modele_consommation_electricite_avec_plus_de_couches.keras')
 
 # Charger et préparer les données de prévisions météorologiques
 df_meteo_previsions = pd.read_csv('meteo_previsions.csv')
