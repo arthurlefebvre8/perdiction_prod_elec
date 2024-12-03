@@ -11,7 +11,7 @@ from datetime import datetime, timedelta
 model = load_model('modele_consommation_electricite_avec_plus_de_couches.keras')
 
 # Charger et préparer les données de prévisions météorologiques
-df_meteo_previsions = pd.read_csv('meteo_72h.csv')
+df_meteo_previsions = pd.read_csv('meteo_previsions.csv')
 df_meteo_previsions['time'] = pd.to_datetime(df_meteo_previsions['time'])
 df_meteo_previsions.rename(columns={'temperature_2m (°C)': 'temperature'}, inplace=True)
 
